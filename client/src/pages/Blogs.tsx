@@ -141,7 +141,7 @@ const Blogs = () => {
             Our <span className="text-orange-700">Insights</span> & Blog
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto opacity-90 leading-relaxed animate-fade-in delay-200">
-            Stay updated with the latest real estate trends, expert advice, and market insights from PropEdge Solutions.
+            Stay updated with the latest real estate trends, expert advice, and market insights from CompanyName Solutions.
           </p>
         </div>
       </section>

@@ -18,7 +18,7 @@ const AdminLogin = () => {
 
     await login(email, password, dispatch);
     //  Static login check (in real app, this would be API call)
-    // if (email === "admin@PropEdge Solutions .com" && password === "admin123") {
+    // if (email === "admin@CompanyName Solutions .com" && password === "admin123") {
     //   toast.success("Login successful!");
     //   navigate("/admin/dashboard");
     // } else {
@@ -40,7 +40,7 @@ const AdminLogin = () => {
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@PropEdge Solutions .com"
+                placeholder="admin@CompanyName Solutions .com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

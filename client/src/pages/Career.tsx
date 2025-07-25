@@ -311,7 +311,7 @@ const Careers = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 border-b-4 border-orange-500 pb-3 inline-block leading-tight">
-              Why <span className="text-indigo-600">Choose</span> PropEdge Solutions?
+              Why <span className="text-indigo-600">Choose</span> CompanyName Solutions?
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               We offer a dynamic work environment with unparalleled opportunities for growth, competitive benefits, and a chance to make a real impact in the real estate industry.

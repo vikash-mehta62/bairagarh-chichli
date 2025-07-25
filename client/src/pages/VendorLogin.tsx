@@ -17,7 +17,7 @@ const VendorLogin = () => {
     e.preventDefault();
     await login(email, password, dispatch);
     // Static login check (in real app, this would be API call)
-    // if (email === "vendor@PropEdge Solutions .com" && password === "vendor123") {
+    // if (email === "vendor@CompanyName Solutions .com" && password === "vendor123") {
     //   toast.success("Login successful!");
     //   navigate("/vendor/dashboard");
     // } else {
@@ -39,7 +39,7 @@ const VendorLogin = () => {
               <Input
                 id="email"
                 type="email"
-                placeholder="vendor@PropEdge Solutions .com"
+                placeholder="vendor@CompanyName Solutions .com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
