@@ -70,7 +70,8 @@ const Navbar = () => {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // Adjust scroll threshold as needed
+      if (window.scrollY > 50) {
+        // Adjust scroll threshold as needed
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -99,7 +100,10 @@ const Navbar = () => {
         setIsSearchOpen(false);
       }
       // Close mobile menu
-      if (!target.closest(".mobile-menu-container") && !target.closest(".menu-button")) {
+      if (
+        !target.closest(".mobile-menu-container") &&
+        !target.closest(".menu-button")
+      ) {
         setIsMenuOpen(false);
       }
     };
@@ -109,14 +113,16 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-lg py-2" : "bg-transparent py-4"}`}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-lg py-2" : "bg-transparent py-4"
+      }`}
+    >
       <div className="w-[95vw] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <Link to="/" className="flex items-center group">
-              <p className="text-3xl font-extrabold text-indigo-700 transition-colors group-hover:text-indigo-900">
-                Company<span className="text-orange-300">Name</span>
-              </p>
+              <img src="/logo.png" className="w-24 h-auto" alt="not found" />
             </Link>
           </div>
 
@@ -135,8 +141,6 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-
-        
 
             <Link to="/vendor">
               <button className="relative bg-white border-2 border-indigo-600 text-indigo-600 px-5 py-2 rounded-full flex items-center gap-2 font-semibold hover:bg-indigo-50 hover:text-indigo-700 transition-all duration-300 overflow-hidden group shadow-sm hover:shadow-md">
@@ -168,15 +172,23 @@ const Navbar = () => {
                 >
                   <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center mr-2 overflow-hidden border border-indigo-300">
                     {user.avatar ? (
-                      <img src={user.avatar} alt="User Avatar" className="w-full h-full object-cover" />
+                      <img
+                        src={user.avatar}
+                        alt="User Avatar"
+                        className="w-full h-full object-cover"
+                      />
                     ) : (
                       <User className="w-4 h-4 text-indigo-600" />
                     )}
                   </div>
                   <span className="truncate max-w-[100px] font-medium text-sm">
-                    {user.name || user.email.split('@')[0]}
+                    {user.name || user.email.split("@")[0]}
                   </span>
-                  <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${isUserDropdownOpen ? 'rotate-180' : 'rotate-0'}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 ml-2 transition-transform ${
+                      isUserDropdownOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
                 </Button>
 
                 {isUserDropdownOpen && (
@@ -199,7 +211,7 @@ const Navbar = () => {
                       Dashboard
                     </Link>
                     <Link
-                      to="/user/profile" 
+                      to="/user/profile"
                       className="flex items-center px-4 py-2.5 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
                       onClick={() => setIsUserDropdownOpen(false)}
                     >
@@ -226,7 +238,12 @@ const Navbar = () => {
                   aria-haspopup="true"
                   aria-expanded={isLoginDropdownOpen}
                 >
-                  Login <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${isLoginDropdownOpen ? 'rotate-180' : 'rotate-0'}`} />
+                  Login{" "}
+                  <ChevronDown
+                    className={`w-4 h-4 ml-2 transition-transform ${
+                      isLoginDropdownOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
                 </Button>
 
                 {isLoginDropdownOpen && (
@@ -303,14 +320,18 @@ const Navbar = () => {
                     <div className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden border border-indigo-300">
                         {user.avatar ? (
-                            <img src={user.avatar} alt="User Avatar" className="w-full h-full object-cover" />
+                          <img
+                            src={user.avatar}
+                            alt="User Avatar"
+                            className="w-full h-full object-cover"
+                          />
                         ) : (
-                            <User className="w-5 h-5 text-white" />
+                          <User className="w-5 h-5 text-white" />
                         )}
                       </div>
                       <div>
                         <p className="font-bold text-gray-900 truncate">
-                          {user.name || user.email.split('@')[0]}
+                          {user.name || user.email.split("@")[0]}
                         </p>
                         <p className="text-sm text-gray-600 capitalize">
                           {user.role}
@@ -319,8 +340,6 @@ const Navbar = () => {
                     </div>
                   </div>
                 )}
-
-              
 
                 {/* Navigation Links (Mobile) */}
                 <div className="py-4 flex-grow">
