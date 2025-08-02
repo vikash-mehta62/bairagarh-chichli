@@ -420,7 +420,7 @@ const Contact = () => {
             <Card className="bg-white rounded-xl shadow-lg border border-gray-100">
               <CardHeader className="p-6 pb-0">
                 <CardTitle className="text-2xl font-bold text-gray-900">
-                  Why Choose CompanyName Solutions?
+                  Why Choose Rudraksha Green Vista Solutions?
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-6 pt-4">

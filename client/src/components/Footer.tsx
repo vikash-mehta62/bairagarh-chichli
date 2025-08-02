@@ -108,10 +108,11 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <a
-                  href="mailto:info@Company Namesolutions.com"
+                  href="mailto:Sales@mypropertyadda.com
+"
                   className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
                 >
-                  info@Company Namesolutions.com
+                  Sales@mypropertyadda.com
                 </a>
               </div>
               <div className="flex items-start gap-3">

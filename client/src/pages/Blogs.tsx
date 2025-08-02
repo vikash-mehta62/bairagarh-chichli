@@ -12,7 +12,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import { Search, Calendar, ArrowRight, Clock, BookOpenText } from "lucide-react"; // Added BookOpenText for hero
+import {
+  Search,
+  Calendar,
+  ArrowRight,
+  Clock,
+  BookOpenText,
+} from "lucide-react"; // Added BookOpenText for hero
 import { getAllBlogsAPI } from "../service/operations/blog";
 import { useNavigate } from "react-router-dom";
 
@@ -83,9 +89,13 @@ const Blogs = () => {
     .sort((a, b) => {
       switch (sortBy) {
         case "newest":
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+          return (
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+          );
         case "oldest":
-          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+          return (
+            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+          );
         case "title":
           return a.title.localeCompare(b.title);
         default:
@@ -121,7 +131,10 @@ const Blogs = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <p className="text-red-600 mb-4 text-lg">{error}</p>
-          <Button onClick={getAllBlogs} className="bg-indigo-600 hover:bg-indigo-700 text-white">
+          <Button
+            onClick={getAllBlogs}
+            className="bg-indigo-600 hover:bg-indigo-700 text-white"
+          >
             Try Again
           </Button>
         </div>
@@ -134,14 +147,21 @@ const Blogs = () => {
       {/* Header (Hero Section) */}
       <section className="relative py-28 md:py-36 bg-gradient-to-br from-indigo-100 to-indigo-300 text-indigo-900 overflow-hidden shadow-md">
         {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.08\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M5 0h1L0 6V5zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")'}}></div>
+        <div
+          className="absolute inset-0 opacity-15"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E\")",
+          }}
+        ></div>
 
         <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-sm leading-tight animate-fade-in-up">
             Our <span className="text-orange-700">Insights</span> & Blog
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto opacity-90 leading-relaxed animate-fade-in delay-200">
-            Stay updated with the latest real estate trends, expert advice, and market insights from CompanyName Solutions.
+            Stay updated with the latest real estate trends, expert advice, and
+            market insights from Rudraksha Green Vista Solutions.
           </p>
         </div>
       </section>
@@ -169,9 +189,18 @@ const Blogs = () => {
                 <SelectValue placeholder="Filter by type" />
               </SelectTrigger>
               <SelectContent className="rounded-lg shadow-lg border border-gray-100">
-                <SelectItem value="all-types" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">All Types</SelectItem>
+                <SelectItem
+                  value="all-types"
+                  className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                >
+                  All Types
+                </SelectItem>
                 {uniqueTypes.map((type) => (
-                  <SelectItem key={type} value={type.toLowerCase()} className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  <SelectItem
+                    key={type}
+                    value={type.toLowerCase()}
+                    className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                  >
                     {type}
                   </SelectItem>
                 ))}
@@ -184,9 +213,24 @@ const Blogs = () => {
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
               <SelectContent className="rounded-lg shadow-lg border border-gray-100">
-                <SelectItem value="newest" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Newest First</SelectItem>
-                <SelectItem value="oldest" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Oldest First</SelectItem>
-                <SelectItem value="title" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Title A-Z</SelectItem>
+                <SelectItem
+                  value="newest"
+                  className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                >
+                  Newest First
+                </SelectItem>
+                <SelectItem
+                  value="oldest"
+                  className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                >
+                  Oldest First
+                </SelectItem>
+                <SelectItem
+                  value="title"
+                  className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                >
+                  Title A-Z
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -248,13 +292,19 @@ const Blogs = () => {
                 className="overflow-hidden rounded-xl shadow-lg border border-gray-100 transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group bg-white cursor-pointer"
                 onClick={() => handleBlogClick(blog._id)}
               >
-                <div className="relative h-56"> {/* Fixed height for consistent image size */}
+                <div className="relative h-56">
+                  {" "}
+                  {/* Fixed height for consistent image size */}
                   <img
-                    src={blog.image || "https://placehold.co/600x400/E0E7FF/312E81?text=Blog+Image"} // Updated placeholder
+                    src={
+                      blog.image ||
+                      "https://placehold.co/600x400/E0E7FF/312E81?text=Blog+Image"
+                    } // Updated placeholder
                     alt={blog.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
-                      e.currentTarget.src = "https://placehold.co/600x400/E0E7FF/312E81?text=Blog+Image";
+                      e.currentTarget.src =
+                        "https://placehold.co/600x400/E0E7FF/312E81?text=Blog+Image";
                     }}
                   />
                   <div className="absolute top-4 left-4">
@@ -264,7 +314,9 @@ const Blogs = () => {
                   </div>
                 </div>
 
-                <CardContent className="p-6 flex flex-col justify-between h-[calc(100%-14rem)]"> {/* Adjust height based on image height */}
+                <CardContent className="p-6 flex flex-col justify-between h-[calc(100%-14rem)]">
+                  {" "}
+                  {/* Adjust height based on image height */}
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 line-clamp-2 mb-2 leading-tight">
                       {blog.title}
@@ -273,7 +325,6 @@ const Blogs = () => {
                       {blog.desc}
                     </p>
                   </div>
-
                   <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4 text-indigo-500" />
@@ -284,7 +335,6 @@ const Blogs = () => {
                       {calculateReadingTime(blog.desc)}
                     </span>
                   </div>
-
                   <div className="border-t border-gray-100 pt-4">
                     <Button
                       className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-md"
@@ -304,13 +354,15 @@ const Blogs = () => {
         ) : (
           <div className="text-center py-20 bg-white rounded-xl shadow-lg border border-gray-100">
             <div className="w-24 h-24 bg-indigo-50 rounded-full flex items-center justify-center mx-auto mb-6">
-              <BookOpenText className="w-12 h-12 text-indigo-400" /> {/* Changed icon */}
+              <BookOpenText className="w-12 h-12 text-indigo-400" />{" "}
+              {/* Changed icon */}
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-3">
               No Blogs Found
             </h3>
             <p className="text-gray-600 mb-6 max-w-sm mx-auto">
-              We couldn't find any blog posts matching your current criteria. Try adjusting your filters.
+              We couldn't find any blog posts matching your current criteria.
+              Try adjusting your filters.
             </p>
             <Button
               onClick={clearFilters}

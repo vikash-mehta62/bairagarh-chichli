@@ -20,7 +20,14 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Send, Download, Phone, Mail } from "lucide-react";
+import {
+  Send,
+  Download,
+  Phone,
+  Mail,
+  MailCheck,
+  MailCheckIcon,
+} from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface ContactPopupProps {
@@ -314,18 +321,27 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
               </p>
               <div className="space-y-3">
                 <a
-                  href="tel:+917771832778" // Replace with your actual phone number
+                  href="tel:+917771832778"
                   className="flex items-center text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-200"
                 >
                   <Phone className="w-6 h-6 mr-3 text-blue-500" /> +91
                   7771832778
                 </a>
+
                 <a
-                  href="mailto:info@yourrealestate.com" // Replace with your actual email
+                  href="tel:+918815265430"
                   className="flex items-center text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-200"
                 >
-                  <Mail className="w-6 h-6 mr-3 text-blue-500" />{" "}
-                  info@yourrealestate.com
+                  <Phone className="w-6 h-6 mr-3 text-blue-500" /> +91
+                  8815265430
+                </a>
+
+                <a
+                  href="mailto:Sales@mypropertyadda.com"
+                  className="flex items-center text-blue-600 hover:text-blue-800 font-semibold text-[14px] transition duration-200"
+                >
+                  <MailCheckIcon className="w-6 h-6 mr-3 text-blue-500" />
+                  Sales@mypropertyadda.com
                 </a>
               </div>
             </div>
