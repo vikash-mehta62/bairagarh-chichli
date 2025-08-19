@@ -589,7 +589,7 @@ const VendorManagement = () => {
                   <Input
                     id="company"
                     name="company"
-                    placeholder="Enter company name"
+                    placeholder="Enter RUDRAKSH GREEN VISTA"
                     value={formData.company}
                     onChange={handleFormChange}
                     required

@@ -114,9 +114,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <Link to="/" className="flex items-center group">
-              <p className="text-3xl font-extrabold text-indigo-700 transition-colors group-hover:text-indigo-900">
-                Company<span className="text-orange-300">Name</span>
-              </p>
+              <img src="/logo1.jpg" className="h-20" alt="" />
             </Link>
           </div>
 

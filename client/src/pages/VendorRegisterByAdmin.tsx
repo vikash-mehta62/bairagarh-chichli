@@ -105,7 +105,7 @@ const VendorRegisterByAdmin = () => {
               <Input
                 id="company"
                 name="company"
-                placeholder="Enter your company name"
+                placeholder="Enter your RUDRAKSH GREEN VISTA"
                 value={formData.company}
                 onChange={handleChange}
                 required

@@ -10,15 +10,15 @@ const Footer = () => {
           {/* About Section */}
           <div className="lg:col-span-2">
             {/* Replace with your actual logo image */}
-            {/* <img
-              src="/path/to/your/logo.png"
-              alt="Company Name Solutions"
-              className="h-12 w-auto mb-6"
-            /> */}
-            <p className="text-4xl font-bold text-white mb-6">Company Name</p> {/* Placeholder for logo text */}
+            <img
+              src="/logo1.jpg"
+              alt="RUDRAKSH GREEN VISTA Solutions"
+              className="h-24 w-auto mb-6"
+            />
+            <p className="text-4xl font-bold text-white mb-6">RUDRAKSH GREEN VISTA</p> {/* Placeholder for logo text */}
 
             <p className="text-gray-400 leading-relaxed mb-6 max-w-lg text-lg">
-              Company Name Solutions Infra is a trusted real estate leader with 25+ years of unparalleled experience. We've proudly served over 5,000 clients and facilitated sales exceeding 1,000,000 sq. ft. of prime property. Your property journey, our expert guidance.
+              RUDRAKSH GREEN VISTA Solutions Infra is a trusted real estate leader with 25+ years of unparalleled experience. We've proudly served over 5,000 clients and facilitated sales exceeding 1,000,000 sq. ft. of prime property. Your property journey, our expert guidance.
             </p>
           </div>
 
@@ -81,8 +81,8 @@ const Footer = () => {
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-                <a href="mailto:info@Company Namesolutions.com" className="text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                  info@Company Namesolutions.com
+                <a href="mailto:info@RUDRAKSH GREEN VISTAsolutions.com" className="text-gray-400 hover:text-blue-500 transition-colors duration-200">
+                  info@RUDRAKSH GREEN VISTAsolutions.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
@@ -100,11 +100,11 @@ const Footer = () => {
         {/* Social Media & Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} Company Name Solutions Real Estate. All rights reserved.
+            © {new Date().getFullYear()} RUDRAKSH GREEN VISTA Solutions Real Estate. All rights reserved.
           </p>
           <div className="flex items-center space-x-6">
             <a
-              href="https://www.facebook.com/Company NameSolutions.co.in"
+              href="https://www.facebook.com/RUDRAKSH GREEN VISTASolutions.co.in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
@@ -113,7 +113,7 @@ const Footer = () => {
               <Facebook className="w-6 h-6" />
             </a>
             <a
-              href="https://www.instagram.com/Company NameSolutions.co.in"
+              href="https://www.instagram.com/RUDRAKSH GREEN VISTASolutions.co.in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
@@ -122,7 +122,7 @@ const Footer = () => {
               <Instagram className="w-6 h-6" />
             </a>
             <a
-              href="https://x.com/Company NameSolutionsInfra"
+              href="https://x.com/RUDRAKSH GREEN VISTASolutionsInfra"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
@@ -131,7 +131,7 @@ const Footer = () => {
               <Twitter className="w-6 h-6" />
             </a>
             <a
-              href="https://www.youtube.com/Company NameSolutionsRealEstate"
+              href="https://www.youtube.com/RUDRAKSH GREEN VISTASolutionsRealEstate"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-blue-500 transition-colors duration-200"

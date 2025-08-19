@@ -67,7 +67,7 @@ const About = () => {
 
         <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-sm leading-tight animate-fade-in-up">
-            Your Trusted Partner in Real Estate: <br /><span className="text-orange-700">Company Name</span>
+            Your Trusted Partner in Real Estate: <br /><span className="text-orange-700">RUDRAKSH GREEN VISTA</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto opacity-90 leading-relaxed animate-fade-in delay-200">
             For over 25 years, we've been building trust and creating homes in Bhopal, Madhya Pradesh.
@@ -84,7 +84,7 @@ const About = () => {
                 Our Foundation Story
               </h2>
               <p className="text-lg leading-relaxed mb-6">
-                **Company Name Infra** was founded with a singular vision: to make real estate accessible, transparent, and genuinely trustworthy for everyone across **Madhya Pradesh**. What began as a small, passionate family endeavor over two decades ago has blossomed into one of the most respected and innovative names in the region's real estate industry.
+                **RUDRAKSH GREEN VISTA Infra** was founded with a singular vision: to make real estate accessible, transparent, and genuinely trustworthy for everyone across **Madhya Pradesh**. What began as a small, passionate family endeavor over two decades ago has blossomed into one of the most respected and innovative names in the region's real estate industry.
               </p>
               <p className="text-lg leading-relaxed">
                 Our unwavering **commitment to excellence**, ethical practices, and paramount customer satisfaction has allowed us to earn the deep trust of over **5,000 delighted clients**. We've proudly facilitated the sale of more than **10,00,000 square feet** of prime real estate, transforming aspirations into realities. We are not just about properties; we are about building lasting communities and futures.
@@ -164,7 +164,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why <span className="text-indigo-600">Choose</span> Company Name?
+              Why <span className="text-indigo-600">Choose</span> RUDRAKSH GREEN VISTA?
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               We combine unparalleled experience, profound expertise, and unwavering dedication to ensure your property journey is seamless and successful.

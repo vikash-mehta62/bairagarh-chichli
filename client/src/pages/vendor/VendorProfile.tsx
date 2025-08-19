@@ -319,7 +319,7 @@ const VendorProfile = () => {
                     )}
                   </div>
                   <div>
-                    <Label htmlFor="company">Company Name</Label>
+                    <Label htmlFor="company">RUDRAKSH GREEN VISTA</Label>
                     {isEditing ? (
                       <Input
                         id="company"
@@ -327,7 +327,7 @@ const VendorProfile = () => {
                         onChange={(e) =>
                           handleInputChange("company", e.target.value)
                         }
-                        placeholder="Enter your company name"
+                        placeholder="Enter your RUDRAKSH GREEN VISTA"
                       />
                     ) : (
                       <p className="mt-1 text-gray-900 flex items-center gap-2">
