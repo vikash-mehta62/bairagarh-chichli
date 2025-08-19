@@ -36,7 +36,8 @@ const Contact = () => {
       if (response) {
         toast({
           title: "Message Sent!",
-          description: "Thank you for contacting us. We'll get back to you soon.",
+          description:
+            "Thank you for contacting us. We'll get back to you soon.",
           variant: "default", // You might have a success variant
         });
         setFormData({
@@ -50,7 +51,8 @@ const Contact = () => {
       } else {
         toast({
           title: "Failed to Send Message",
-          description: "There was an issue sending your inquiry. Please try again.",
+          description:
+            "There was an issue sending your inquiry. Please try again.",
           variant: "destructive", // You might have an error variant
         });
       }
@@ -74,24 +76,30 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Our Location",
-      details: ["123, Main Street, Arera Colony", "Bhopal, Madhya Pradesh, India"],
+      details: [
+        "Shop No. 8, Kolar Plaza, Near ",
+        "D Mart,  Kolar Road, Bhopal",
+      ],
       link: "https://maps.app.goo.gl/YOUR_GOOGLE_MAPS_LINK_HERE", // Replace with actual Google Maps link
       color: "indigo", // For alternating icon colors
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 83190 39381", "+91 78901 23456"],
-      link: "tel:+918319039381",
+      details: ["+91 7771832778", "+91 8815265430"],
+      link: "tel:+917771832778",
       color: "orange",
     },
-    {
-      icon: Mail,
-      title: "Email Us",
-      details: ["info@propedgesolutions.co.in", "sales@propedgesolutions.co.in"],
-      link: "mailto:info@propedgesolutions.co.in",
-      color: "indigo",
-    },
+    // {
+    //   icon: Mail,
+    //   title: "Email Us",
+    //   details: [
+    //     "info@propedgesolutions.co.in",
+    //     "sales@propedgesolutions.co.in",
+    //   ],
+    //   link: "mailto:info@propedgesolutions.co.in",
+    //   color: "indigo",
+    // },
     {
       icon: Clock,
       title: "Working Hours",
@@ -106,21 +114,28 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="relative py-28 md:py-36 bg-gradient-to-br from-indigo-100 to-indigo-300 text-indigo-900 overflow-hidden shadow-md">
         {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-15" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'6\' height=\'6\' viewBox=\'0 0 6 6\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.08\' fill-rule=\'evenodd\'%3E%3Cpath d=\'M5 0h1L0 6V5zM6 5v1H5z\'/%3E%3C/g%3E%3C/svg%3E")'}}></div>
+        <div
+          className="absolute inset-0 opacity-15"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E\")",
+          }}
+        ></div>
 
         <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-sm leading-tight animate-fade-in-up">
             Get In <span className="text-orange-700">Touch</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto opacity-90 leading-relaxed animate-fade-in delay-200">
-            Connect with our expert team for all your real estate needs and inquiries.
+            Connect with our expert team for all your real estate needs and
+            inquiries.
           </p>
         </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-16 md:py-24">
         {/* Contact Information */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {contactInfo.map((info, index) => (
             <Card
               key={index}
@@ -140,7 +155,10 @@ const Contact = () => {
                   {info.title}
                 </h3>
                 {info.details.map((detail, detailIndex) => (
-                  <p key={detailIndex} className="text-gray-700 text-sm leading-relaxed">
+                  <p
+                    key={detailIndex}
+                    className="text-gray-700 text-sm leading-relaxed"
+                  >
                     {info.link && detailIndex === 0 ? (
                       <a
                         href={info.link}
@@ -168,14 +186,20 @@ const Contact = () => {
                 Send us a Message
               </CardTitle>
               <p className="text-gray-700 text-lg leading-relaxed">
-                Fill out the form below and our team will get back to you as soon as possible.
+                Fill out the form below and our team will get back to you as
+                soon as possible.
               </p>
             </CardHeader>
             <CardContent className="p-0">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name" className="text-gray-700 font-medium mb-1 block">Full Name *</Label>
+                    <Label
+                      htmlFor="name"
+                      className="text-gray-700 font-medium mb-1 block"
+                    >
+                      Full Name *
+                    </Label>
                     <Input
                       id="name"
                       value={formData.name}
@@ -189,7 +213,12 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-gray-700 font-medium mb-1 block">Email Address *</Label>
+                    <Label
+                      htmlFor="email"
+                      className="text-gray-700 font-medium mb-1 block"
+                    >
+                      Email Address *
+                    </Label>
                     <Input
                       id="email"
                       type="email"
@@ -207,7 +236,12 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="phone" className="text-gray-700 font-medium mb-1 block">Phone Number *</Label>
+                    <Label
+                      htmlFor="phone"
+                      className="text-gray-700 font-medium mb-1 block"
+                    >
+                      Phone Number *
+                    </Label>
                     <Input
                       id="phone"
                       type="tel"
@@ -215,14 +249,19 @@ const Contact = () => {
                       onChange={(e) =>
                         handleInputChange("phone", e.target.value)
                       }
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 7771832778"
                       required
                       className="h-12 border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg text-gray-900"
                       disabled={isSubmitting}
                     />
                   </div>
                   <div>
-                    <Label htmlFor="propertyType" className="text-gray-700 font-medium mb-1 block">Property Interest</Label>
+                    <Label
+                      htmlFor="propertyType"
+                      className="text-gray-700 font-medium mb-1 block"
+                    >
+                      Property Interest
+                    </Label>
                     <Select
                       value={formData.propertyType}
                       onValueChange={(value) =>
@@ -234,21 +273,66 @@ const Contact = () => {
                         <SelectValue placeholder="Select property type" />
                       </SelectTrigger>
                       <SelectContent className="rounded-lg shadow-lg border border-gray-100">
-                        <SelectItem value="apartment" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Apartment</SelectItem>
-                        <SelectItem value="villa" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Villa</SelectItem>
-                        <SelectItem value="commercial" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Commercial</SelectItem>
-                        <SelectItem value="plot" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Plot</SelectItem>
-                        <SelectItem value="buying-a-home" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Buying a home</SelectItem>
-                        <SelectItem value="renting-a-home" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Renting a home</SelectItem>
-                        <SelectItem value="sell-property" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Sell property</SelectItem>
-                        <SelectItem value="rent-property" className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">Rent property</SelectItem>
+                        <SelectItem
+                          value="apartment"
+                          className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                        >
+                          Apartment
+                        </SelectItem>
+                        <SelectItem
+                          value="villa"
+                          className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                        >
+                          Villa
+                        </SelectItem>
+                        <SelectItem
+                          value="commercial"
+                          className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                        >
+                          Commercial
+                        </SelectItem>
+                        <SelectItem
+                          value="plot"
+                          className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                        >
+                          Plot
+                        </SelectItem>
+                        <SelectItem
+                          value="buying-a-home"
+                          className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                        >
+                          Buying a home
+                        </SelectItem>
+                        <SelectItem
+                          value="renting-a-home"
+                          className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                        >
+                          Renting a home
+                        </SelectItem>
+                        <SelectItem
+                          value="sell-property"
+                          className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                        >
+                          Sell property
+                        </SelectItem>
+                        <SelectItem
+                          value="rent-property"
+                          className="text-gray-700 hover:bg-indigo-50 hover:text-indigo-600"
+                        >
+                          Rent property
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="subject" className="text-gray-700 font-medium mb-1 block">Subject *</Label>
+                  <Label
+                    htmlFor="subject"
+                    className="text-gray-700 font-medium mb-1 block"
+                  >
+                    Subject *
+                  </Label>
                   <Input
                     id="subject"
                     value={formData.subject}
@@ -263,7 +347,12 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <Label htmlFor="message" className="text-gray-700 font-medium mb-1 block">Message *</Label>
+                  <Label
+                    htmlFor="message"
+                    className="text-gray-700 font-medium mb-1 block"
+                  >
+                    Message *
+                  </Label>
                   <Textarea
                     id="message"
                     value={formData.message}
@@ -321,7 +410,9 @@ const Contact = () => {
                   ></iframe>
                 </div>
                 <p className="text-gray-700 text-base leading-relaxed">
-                  Located in the heart of Bhopal, our office is easily accessible and equipped with modern facilities to serve you better. We look forward to welcoming you!
+                  Located in the heart of Bhopal, our office is easily
+                  accessible and equipped with modern facilities to serve you
+                  better. We look forward to welcoming you!
                 </p>
               </CardContent>
             </Card>
@@ -329,7 +420,7 @@ const Contact = () => {
             <Card className="bg-white rounded-xl shadow-lg border border-gray-100">
               <CardHeader className="p-6 pb-0">
                 <CardTitle className="text-2xl font-bold text-gray-900">
-                  Why Choose CompanyName Solutions?
+                  Why Choose Rudraksha Green Vista Solutions?
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-6 pt-4">
@@ -337,31 +428,36 @@ const Contact = () => {
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
                     <span className="text-gray-700 leading-relaxed">
-                      25+ years of trusted experience in the real estate market, ensuring unparalleled expertise.
+                      25+ years of trusted experience in the real estate market,
+                      ensuring unparalleled expertise.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
                     <span className="text-gray-700 leading-relaxed">
-                      Successfully served over 5,000 satisfied clients and our community continues to grow.
+                      Successfully served over 5,000 satisfied clients and our
+                      community continues to grow.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
                     <span className="text-gray-700 leading-relaxed">
-                      Our expert team possesses deep local market knowledge, providing you with the best insights.
+                      Our expert team possesses deep local market knowledge,
+                      providing you with the best insights.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
                     <span className="text-gray-700 leading-relaxed">
-                      Committed to transparent and ethical business practices in every transaction.
+                      Committed to transparent and ethical business practices in
+                      every transaction.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-orange-500 mt-1 mr-3 flex-shrink-0" />
                     <span className="text-gray-700 leading-relaxed">
-                      We offer comprehensive, end-to-end real estate solutions tailored to your unique needs.
+                      We offer comprehensive, end-to-end real estate solutions
+                      tailored to your unique needs.
                     </span>
                   </li>
                 </ul>

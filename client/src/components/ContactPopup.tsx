@@ -20,7 +20,14 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Send, Download, Phone, Mail } from "lucide-react";
+import {
+  Send,
+  Download,
+  Phone,
+  Mail,
+  MailCheck,
+  MailCheckIcon,
+} from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface ContactPopupProps {
@@ -51,14 +58,16 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
     if (responseSuccess) {
       toast({
         title: "Inquiry Sent Successfully!",
-        description: "Thank you for reaching out. We'll connect with you very soon.",
+        description:
+          "Thank you for reaching out. We'll connect with you very soon.",
         variant: "default",
       });
       onClose();
     } else {
       toast({
         title: "Failed to Send Inquiry",
-        description: "There was an issue sending your message. Please try again or contact us directly.",
+        description:
+          "There was an issue sending your message. Please try again or contact us directly.",
         variant: "destructive",
       });
     }
@@ -99,7 +108,8 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
             Connect With Our Property Experts
           </DialogTitle>
           <DialogDescription className="text-gray-600 mt-2 text-lg">
-            Whether you're looking to buy, sell, or rent, we're here to help you find your dream property.
+            Whether you're looking to buy, sell, or rent, we're here to help you
+            find your dream property.
           </DialogDescription>
         </DialogHeader>
 
@@ -112,7 +122,10 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="popup-name" className="text-gray-700 font-medium text-sm">
+                  <Label
+                    htmlFor="popup-name"
+                    className="text-gray-700 font-medium text-sm"
+                  >
                     Full Name <span className="text-red-500">*</span>
                   </Label>
                   <Input
@@ -125,7 +138,10 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="popup-email" className="text-gray-700 font-medium text-sm">
+                  <Label
+                    htmlFor="popup-email"
+                    className="text-gray-700 font-medium text-sm"
+                  >
                     Email Address <span className="text-red-500">*</span>
                   </Label>
                   <Input
@@ -142,7 +158,10 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="popup-phone" className="text-gray-700 font-medium text-sm">
+                  <Label
+                    htmlFor="popup-phone"
+                    className="text-gray-700 font-medium text-sm"
+                  >
                     Phone Number <span className="text-red-500">*</span>
                   </Label>
                   <Input
@@ -150,18 +169,23 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 7771832778"
                     required
                     className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500/50 transition duration-200"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="popup-propertyType" className="text-gray-700 font-medium text-sm">
+                  <Label
+                    htmlFor="popup-propertyType"
+                    className="text-gray-700 font-medium text-sm"
+                  >
                     Interest in
                   </Label>
                   <Select
                     value={formData.propertyType}
-                    onValueChange={(value) => handleInputChange("propertyType", value)}
+                    onValueChange={(value) =>
+                      handleInputChange("propertyType", value)
+                    }
                   >
                     <SelectTrigger className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500/50 transition duration-200">
                       <SelectValue placeholder="Select property type/service" />
@@ -169,20 +193,35 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
                     <SelectContent>
                       <SelectItem value="apartment">Apartment</SelectItem>
                       <SelectItem value="villa">Villa</SelectItem>
-                      <SelectItem value="commercial">Commercial Space</SelectItem>
+                      <SelectItem value="commercial">
+                        Commercial Space
+                      </SelectItem>
                       <SelectItem value="plot">Land/Plot</SelectItem>
-                      <SelectItem value="buying-a-home">Buying a Home</SelectItem>
-                      <SelectItem value="renting-a-home">Renting a Home</SelectItem>
-                      <SelectItem value="sell-property">Selling Property</SelectItem>
-                      <SelectItem value="rent-property">Renting Out Property</SelectItem>
-                      <SelectItem value="general-inquiry">General Inquiry</SelectItem>
+                      <SelectItem value="buying-a-home">
+                        Buying a Home
+                      </SelectItem>
+                      <SelectItem value="renting-a-home">
+                        Renting a Home
+                      </SelectItem>
+                      <SelectItem value="sell-property">
+                        Selling Property
+                      </SelectItem>
+                      <SelectItem value="rent-property">
+                        Renting Out Property
+                      </SelectItem>
+                      <SelectItem value="general-inquiry">
+                        General Inquiry
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
               </div>
 
               <div>
-                <Label htmlFor="popup-subject" className="text-gray-700 font-medium text-sm">
+                <Label
+                  htmlFor="popup-subject"
+                  className="text-gray-700 font-medium text-sm"
+                >
                   Subject <span className="text-red-500">*</span>
                 </Label>
                 <Input
@@ -196,7 +235,10 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
               </div>
 
               <div>
-                <Label htmlFor="popup-message" className="text-gray-700 font-medium text-sm">
+                <Label
+                  htmlFor="popup-message"
+                  className="text-gray-700 font-medium text-sm"
+                >
                   Your Message <span className="text-red-500">*</span>
                 </Label>
                 <Textarea
@@ -243,18 +285,28 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
                 <Button
                   type="button"
                   variant="default"
-                  onClick={() => handleDownloadPdf("/1.pdf", "Residential_Properties_Brochure.pdf")}
+                  onClick={() =>
+                    handleDownloadPdf(
+                      "/1.pdf",
+                      "Residential_Properties_Brochure.pdf"
+                    )
+                  }
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center py-3 px-4 rounded-lg transition duration-300 ease-in-out text-base font-medium shadow-sm"
                 >
-                  <Download className="w-5 h-5 mr-3" />  Residential Brochure
+                  <Download className="w-5 h-5 mr-3" /> Residential Brochure
                 </Button>
                 <Button
                   type="button"
                   variant="default"
-                  onClick={() => handleDownloadPdf("/2.pdf", "Commercial_Properties_Brochure.pdf")}
+                  onClick={() =>
+                    handleDownloadPdf(
+                      "/2.pdf",
+                      "Commercial_Properties_Brochure.pdf"
+                    )
+                  }
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center py-3 px-4 rounded-lg transition duration-300 ease-in-out text-base font-medium shadow-sm"
                 >
-                  <Download className="w-5 h-5 mr-3" />  Commercial Brochure
+                  <Download className="w-5 h-5 mr-3" /> Commercial Brochure
                 </Button>
               </div>
             </div>
@@ -264,20 +316,32 @@ const ContactPopup = ({ isOpen, onClose }: ContactPopupProps) => {
                 Prefer to Talk?
               </h3>
               <p className="text-gray-700 mb-4 text-lg">
-                Reach out to us directly for immediate assistance or detailed discussions.
+                Reach out to us directly for immediate assistance or detailed
+                discussions.
               </p>
               <div className="space-y-3">
                 <a
-                  href="tel:+919876543210" // Replace with your actual phone number
+                  href="tel:+917771832778"
                   className="flex items-center text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-200"
                 >
-                  <Phone className="w-6 h-6 mr-3 text-blue-500" /> +91 98765 43210
+                  <Phone className="w-6 h-6 mr-3 text-blue-500" /> +91
+                  7771832778
                 </a>
+
                 <a
-                  href="mailto:info@yourrealestate.com" // Replace with your actual email
+                  href="tel:+918815265430"
                   className="flex items-center text-blue-600 hover:text-blue-800 font-semibold text-lg transition duration-200"
                 >
-                  <Mail className="w-6 h-6 mr-3 text-blue-500" /> info@yourrealestate.com
+                  <Phone className="w-6 h-6 mr-3 text-blue-500" /> +91
+                  8815265430
+                </a>
+
+                <a
+                  href="mailto:Sales@mypropertyadda.com"
+                  className="flex items-center text-blue-600 hover:text-blue-800 font-semibold text-[14px] transition duration-200"
+                >
+                  <MailCheckIcon className="w-6 h-6 mr-3 text-blue-500" />
+                  Sales@mypropertyadda.com
                 </a>
               </div>
             </div>

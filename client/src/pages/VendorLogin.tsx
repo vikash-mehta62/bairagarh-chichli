@@ -39,7 +39,7 @@ const VendorLogin = () => {
               <Input
                 id="email"
                 type="email"
-                placeholder="vendor@CompanyName Solutions .com"
+                placeholder="vendor@vendor.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

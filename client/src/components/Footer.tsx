@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from "lucide-react"; // Import necessary icons
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
+} from "lucide-react"; // Import necessary icons
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 dark:bg-gray-950 transition-colors duration-300 py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-
           {/* About Section */}
           <div className="lg:col-span-2">
             {/* Replace with your actual logo image */}
@@ -24,7 +31,9 @@ const Footer = () => {
 
           {/* Quick Links Section */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-6 border-b border-gray-700 pb-3">Quick Links</h3>
+            <h3 className="text-xl font-semibold text-white mb-6 border-b border-gray-700 pb-3">
+              Quick Links
+            </h3>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -71,12 +80,26 @@ const Footer = () => {
 
           {/* Contact Us Section */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-6 border-b border-gray-700 pb-3">Contact Us</h3>
+            <h3 className="text-xl font-semibold text-white mb-6 border-b border-gray-700 pb-3">
+              Contact Us
+            </h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-                <a href="tel:+919876543210" className="text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                  +91 98765 43210
+                <a
+                  href="tel:+917771832778"
+                  className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
+                >
+                  +91 7771832778
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                <a
+                  href="tel:+918815265430"
+                  className="text-gray-400 hover:text-blue-500 transition-colors duration-200"
+                >
+                  +91 8815265430
                 </a>
               </div>
               <div className="flex items-start gap-3">
@@ -88,13 +111,11 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <address className="not-italic text-gray-400">
-                  123 Main Street, Suite 400<br />
-                  Bhopal, MP 462001, India
+                  Shop No. 8, Kolar Plaza, Near <br />D Mart, Kolar Road, Bhopal
                 </address>
               </div>
             </div>
           </div>
-
         </div>
 
         {/* Social Media & Copyright */}
