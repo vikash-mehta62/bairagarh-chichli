@@ -121,7 +121,7 @@ const Footer = () => {
         {/* Social Media & Copyright */}
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} RUDRAKSH GREEN VISTA Solutions Real Estate. All rights reserved.
+            © {new Date().getFullYear()} RUDRAKSH GREEN VISTA Solutions Real Estate. All rights Reserved.
           </p>
           <div className="flex items-center space-x-6">
             <a
